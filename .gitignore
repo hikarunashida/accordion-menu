@@ -1,0 +1,10 @@
+/*.log
+/target
+/*-init.clj
+/resources/public/js/compiled
+out
+.DS_Store
+/resources/public/css/*
+/resources/public/js/*
+.lein-*
+.nrepl-port
