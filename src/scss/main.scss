@@ -1,9 +1,13 @@
-//TODO: add styles
+$border: #e6e6e6;
+$selected: #D3F4FF;
+$hovering: #FFE7E8;
+$label-background: #B5D7FF;
+$content-background: #FDF7E8;
 
 .accbox {
   div:first-child {
     .acc-label {
-      border-top: 1px solid #e6e6e6;
+      border-top: 1px solid $border;
     }
   }
 }
@@ -12,7 +16,10 @@
   display: none;
   &:checked {
     ~ .acc-label {
-      background-color: #e0efff;
+      background-color: $selected;
+      &:hover {
+        background: $hovering;
+      }
     }
     ~ .acc-content {
       height: auto;
@@ -24,12 +31,12 @@
 .acc-label {
   display: block;
   height: 30px;
-  background-color: #fff;
-  border-bottom: 1px solid #e6e6e6;
+  background-color: $label-background;
+  border-bottom: 1px solid $border;
   cursor: pointer;
   transition: all 0.1s;
   &:hover {
-    background: #eef0f2;
+    background: $hovering;
   }
   span {
     padding: 5px 10px 0px 10px;
@@ -44,6 +51,7 @@
   overflow-y: hidden;
   transition: all 0.2s;
   margin: 0pt;
+  background-color: $content-background;
   ul {
     list-style-type: none;
   }
