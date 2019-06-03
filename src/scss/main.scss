@@ -17,7 +17,6 @@
     ~ .acc-content {
       height: auto;
       padding: 10px;
-      opacity: 1;
     }
   }
 }
@@ -42,8 +41,7 @@
 
 .acc-content {
   height: 0;
-  opacity: 0;
-  overflow: hidden;
+  overflow-y: hidden;
   transition: all 0.2s;
   margin: 0pt;
   ul {
