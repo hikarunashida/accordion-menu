@@ -8,7 +8,8 @@
      [:h1 "Hello from " @name]]))
 
 (defn content-list [num more-num]
-  [:li (str num "x" more-num " = " (* num more-num))])
+  [:li {:key (str num "x" more-num)}
+   (str num "x" more-num " = " (* num more-num))])
 
 (defn accordion-content [num]
   [:ul.acc-content
