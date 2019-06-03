@@ -5,6 +5,7 @@ $label-background: #B5D7FF;
 $content-background: #FDF7E8;
 
 .accbox {
+  max-width: 450pt;
   div:first-child {
     .acc-label {
       border-top: 1px solid $border;
