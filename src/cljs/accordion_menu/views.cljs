@@ -11,10 +11,6 @@
   [:li {:key (str num "x" more-num)}
    (str num "x" more-num " = " (* num more-num))])
 
-(defn accordion-content [num]
-  [:ul.acc-content
-   (map #(content-list num %) (range 1 10))])
-
 (defn list-accordion [num]
   [:div {:id num
          :key num}
@@ -22,7 +18,8 @@
                        :id (str "toggle_" num)}]
    [:label.acc-label {:for (str "toggle_" num)}
     [:span (str num "の段")]]
-   [accordion-content num]])
+   [:ul.acc-content
+    (map #(content-list num %) (range 1 10))]])
 
 (defn main-panel []
   [:div.accbox
