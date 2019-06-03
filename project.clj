@@ -13,7 +13,8 @@
   :profiles {:dev
              {:dependencies [[binaryage/devtools "0.9.10"]
                              [figwheel-sidecar "0.5.16"]
-                             [cider/piggieback "0.4.0"]]
+                             [cider/piggieback "0.4.0"]
+                             [org.slf4j/slf4j-nop "1.7.13" :scope "test"]]
               :plugins      [[lein-figwheel "0.5.18"]]
               :source-paths ["src/cljs" "env/dev/clj"]
               :repl-options {:init-ns accordion-menu.repl
