@@ -1,1 +1,50 @@
 //TODO: add styles
+
+.accbox {
+  div:first-child {
+    label {
+      border-top: 1px solid #e6e6e6;
+    }
+  }
+}
+
+.acc-toggle {
+  display: none;
+  &:checked {
+    ~ acc-label {
+      background-color: #e0efff;
+    }
+    ~ .acc-content {
+      height: auto;
+      padding: 10px;
+      opacity: 1;
+    }
+  }
+}
+
+.acc-label {
+  display: block;
+  height: 30px;
+  background-color: #fff;
+  border-bottom: 1px solid #e6e6e6;
+  cursor: pointer;
+  transition: all 0.1s;
+  &:hover {
+    background: #eef0f2;
+  }
+  span {
+    padding: 5px 10px 0px 10px;
+    display: inline-block;
+    text-align: left;
+    width: 100%;
+  }
+}
+
+.acc-content {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.2s;
+  margin: 0pt;
+  list-style-type: none;
+}
