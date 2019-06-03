@@ -11,7 +11,7 @@
 .acc-toggle {
   display: none;
   &:checked {
-    ~ acc-label {
+    ~ .acc-label {
       background-color: #e0efff;
     }
     ~ .acc-content {
