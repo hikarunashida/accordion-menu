@@ -46,5 +46,7 @@
   overflow: hidden;
   transition: all 0.2s;
   margin: 0pt;
-  list-style-type: none;
+  ul {
+    list-style-type: none;
+  }
 }
