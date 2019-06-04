@@ -3,26 +3,29 @@
 
 ;; view
 
-(defn content-list [num more-num]
-  [:li {:key (str num "x" more-num)}
-   (str num "x" more-num " = " (* num more-num))])
+(defn content-list [num1 num2]
+  [:li {:key (str num1 "x" num2)}
+   (str num1 "x" num2 " = " (* num1 num2))])
 
-(defn list-accordion [num]
-  [:div {:id num
-         :key num}
-   [:input.acc-toggle {:type "checkbox"
-                       :id (str "toggle_" num)}]
-   [:label.acc-label {:for (str "toggle_" num)}
-    [:span (str num "の段")]]
-   [:div.acc-content
-    [:ul
-     (map #(content-list num %) (range 1 10))]]])
+(defn accordion-list [num]
+  (let [default-idx 3
+        content-list* (partial content-list num)]
+    [:div {:id num :key num}
+     [:input.acc-toggle {:type "checkbox"
+                         :id (str "toggle_" num)
+                         :default-checked (= num default-idx)}]
+     [:label.acc-label {:for (str "toggle_" num)}
+      [:span (str num "の段")]]
+     [:div.acc-content
+      [:ul
+       (map content-list* (range 1 10))]]]))
+
+(defn accordion-menu []
+  [:div.accbox
+   [:h1 "Accordion Menu"]
+   (map accordion-list (range 1 10))])
 
 ;; initialization
-
-(defn main-panel []
-  [:div.accbox
-   (doall (map list-accordion (range 1 10)))])
 
 (defn dev-setup []
   (when ^boolean goog.DEBUG
@@ -30,7 +33,7 @@
     (println "dev mode")))
 
 (defn mount-root []
-  (reagent/render [main-panel]
+  (reagent/render [accordion-menu]
                   (.getElementById js/document "app")))
 
 (defn ^:export init []
