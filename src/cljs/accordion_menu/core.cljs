@@ -1,10 +1,9 @@
 (ns accordion-menu.core
   (:require [reagent.core :as reagent]
-            [accordion-menu.views :as views]
-            [accordion-menu.config :as config]))
+            [accordion-menu.views :as views]))
 
 (defn dev-setup []
-  (when config/debug?
+  (when ^boolean goog.DEBUG
     (enable-console-print!)
     (println "dev mode")))
 
