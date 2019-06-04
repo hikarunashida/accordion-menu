@@ -1,7 +1,7 @@
 $border: #e6e6e6;
-$selected: #D3F4FF;
-$hovering: #FFE7E8;
-$label-background: #B5D7FF;
+$selected: #C1DEFF;
+$hovering: #A5C2FF;
+$label-background: #89A7E8;
 $content-background: #FDF7E8;
 
 .accbox {
@@ -55,5 +55,6 @@ $content-background: #FDF7E8;
   background-color: $content-background;
   ul {
     list-style-type: none;
+    margin: 0pt;
   }
 }
