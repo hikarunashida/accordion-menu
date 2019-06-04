@@ -20,7 +20,8 @@
              :prod {}}
   :cljsbuild {:builds [{:id           "dev"
                         :source-paths ["src/cljs"]
-                        :figwheel     {:on-jsload "accordion-menu.core/mount-root"}
+                        :figwheel     {:on-jsload "accordion-menu.core/mount-root"
+                                       :websocket-host :js-client-host}
                         :compiler     {:main                 accordion-menu.core
                                        :output-to            "resources/public/js/compiled/app.js"
                                        :output-dir           "resources/public/js/compiled/out"
