@@ -1,11 +1,4 @@
-(ns accordion-menu.views
-  (:require [re-frame.core :as re-frame]
-            [accordion-menu.subs :as subs]))
-
-#_(defn main-panel []
-  (let [name (re-frame/subscribe [::subs/name])]
-    [:div
-     [:h1 "Hello from " @name]]))
+(ns accordion-menu.views)
 
 (defn content-list [num more-num]
   [:li {:key (str num "x" more-num)}

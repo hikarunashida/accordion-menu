@@ -1,8 +1,7 @@
 (defproject accordion-menu "0.1.0-SNAPSHOT"
   :dependencies [[org.clojure/clojure "1.10.0"]
                  [org.clojure/clojurescript "1.10.520"]
-                 [reagent "0.8.1"]
-                 [re-frame "0.10.6"]]
+                 [reagent "0.8.1"]]
   :plugins [[lein-cljsbuild "1.1.7"]
             [deraen/lein-sass4clj "0.3.1"]]
   :min-lein-version "2.5.3"
