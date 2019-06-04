@@ -15,9 +15,8 @@
                              [cider/piggieback "0.4.0"]
                              [org.slf4j/slf4j-nop "1.7.13" :scope "test"]]
               :plugins      [[lein-figwheel "0.5.18"]]
-              :source-paths ["src/cljs" "env/dev/clj"]
-              :repl-options {:init-ns accordion-menu.repl
-                             :nrepl-middleware [cider.piggieback/wrap-cljs-repl]}}
+              :source-paths ["src/cljs"]
+              :repl-options {:nrepl-middleware [cider.piggieback/wrap-cljs-repl]}}
              :prod {}}
   :cljsbuild {:builds [{:id           "dev"
                         :source-paths ["src/cljs"]
