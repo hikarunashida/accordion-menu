@@ -5,7 +5,7 @@
   :plugins [[lein-cljsbuild "1.1.7"]
             [deraen/lein-sass4clj "0.3.1"]]
   :min-lein-version "2.5.3"
-  :source-paths ["src/clj" "src/cljs"]
+  :source-paths ["src/cljs"]
   :clean-targets ^{:protect false} ["resources/public/js/compiled" "target"]
   :figwheel {:css-dirs ["resources/public/css"]}
   :repl-options {:nrepl-middleware [cider.piggieback/wrap-cljs-repl]}
